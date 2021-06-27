@@ -113,6 +113,14 @@ body {
 .skill-css {
   background-image: url("img/icon-css.svg");
 }
+.skill-csharp {
+  background-image: url("img/icon-csharp.svg");
+  background-size: 3%;
+}
+.skill-1c {
+  background-image: url("img/icon-1c.svg");
+  background-size: 4%;
+}
 
 .level {
   margin: 4px 0 16px;
@@ -186,4 +194,33 @@ body {
 .footer-phone {
   padding-left: 25px;
   background-image: url("img/icon-phone.svg");
+}
+@media screen and (max-width: 768px) {
+  .heading{
+    font-size: 60px;
+  }
+  .subheading {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .heading, .subheading{
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .heading, .subheading{
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 15px;
+  }
 }
