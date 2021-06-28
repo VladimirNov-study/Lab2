@@ -220,7 +220,7 @@ img {
   }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 370px) {
   .heading, .subheading{
     font-size: 30px;
   }
