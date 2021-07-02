@@ -4,6 +4,7 @@ const skills = [
     {css_class: "skill-css", name: "CSS", level: 40},
     {css_class: "skill-1c", name: "1C", level: 29},
 ]
+
 function insert_skills() {
     const dl = document.createElement('dl');
     dl.classList.add('skills-list');
@@ -25,5 +26,10 @@ function insert_skills() {
     });
     document.querySelector('.skills').append(dl);
 }
+fetch('db/skills.json')
+  .then(data => data.json())
+  .then(json => { 
+    insert_skills(json); 
+  })
+  .catch(() => console.error("упс, что-то пошло не так"));
 
-insert_skills();
