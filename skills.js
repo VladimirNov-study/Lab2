@@ -1,9 +1,3 @@
-const skills = [
-    {css_class: "skill-html", name: "HTML", level: 60},
-    {css_class: "skill-csharp", name: "C#", level: 65},
-    {css_class: "skill-css", name: "CSS", level: 40},
-    {css_class: "skill-1c", name: "1C", level: 29},
-]
 
 
 fetch('db/skills.json')
