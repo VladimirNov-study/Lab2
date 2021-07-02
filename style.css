@@ -119,11 +119,11 @@ img {
 }
 .skill-csharp {
   background-image: url("img/icon-csharp.svg");
-  background-size: 3%;
+  background-size:contain;
 }
 .skill-1c {
   background-image: url("img/icon-1c.svg");
-  background-size: 4%;
+  background-size: contain;
 }
 
 .level {
