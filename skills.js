@@ -5,10 +5,13 @@ const skills = [
     {css_class: "skill-1c", name: "1C", level: 29},
 ]
 
-function insert_skills() {
+
+fetch('db/skills.json')
+  .then(data => data.json())
+  .then(json => { 
     const dl = document.createElement('dl');
     dl.classList.add('skills-list');
-    skills.forEach(skill => {
+    json.forEach(skill => {
         const dt = document.createElement('dt');
         dt.textContent = skill.name;
         dt.classList.add(skill.css_class);
@@ -21,15 +24,10 @@ function insert_skills() {
         div.textContent = skill.level;
         
         dd.appendChild(div);
-        dl.append(dt);
+        dl.append(dt);  
         dl.append(dd);
     });
-    document.querySelector('.skills').append(dl);
-}
-fetch('db/skills.json')
-  .then(data => data.json())
-  .then(json => { 
-    insert_skills(json); 
+    document.querySelector('.skills').append(dl); 
   })
   .catch(() => console.error("упс, что-то пошло не так"));
 
